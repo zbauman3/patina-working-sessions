@@ -1,6 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const { createPatinaNextPlugin } = require('@upstart/patina-design-system/plugins/nextjs')
+const withPatina = createPatinaNextPlugin({
+  /** Patina config */
+})
 
-module.exports = nextConfig
+module.exports = (phase, { defaultConfig }) => {
+  /** Other setup */
+
+  return withPatina({
+    /** Next config */
+  })
+}

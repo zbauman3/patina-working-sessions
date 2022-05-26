@@ -1,8 +1,13 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import '@upstart/patina-design-system/css-reset'
+import { PatinaProvider } from '@upstart/patina-design-system'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const App = ({ Component, pageProps }: AppProps): React.ReactElement => {
+  return (
+    <PatinaProvider>
+      <Component {...pageProps} />
+    </PatinaProvider>
+  )
 }
 
-export default MyApp
+export default App
