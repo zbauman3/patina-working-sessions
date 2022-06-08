@@ -1,7 +1,7 @@
-import { renderPatina } from '../utils/renderPatina';
+import { renderPatina } from '../../utils/renderPatina';
 import { fireEvent } from '@testing-library/react';
 
-import Home from './index'
+import Home from '../../pages/index'
 
 describe('ExamplePage', () => {
   it('renders correctly', () => {
