@@ -2,6 +2,8 @@ import { useState } from 'react';
 import type { NextPage } from 'next'
 import { Box, Heading, Text } from '@upstart/patina-design-system';
 
+import Button from '../components/Button';
+
 const Home: NextPage = () => {
   const [ count, setCount ] = useState(0)
   return (
@@ -11,19 +13,10 @@ const Home: NextPage = () => {
       }}>
         <Heading component='h1' size='xl' color='brand'>Hello, Patina!</Heading>
       </Box>
-      <Box
-        component='button'
+      <Button
         aria-controls='current-count'
-        atoms={{
-          padding: 'xs',
-          marginBottom: 'xs',
-          backgroundColor: 'brand',
-          color: 'onBrand',
-          borderRadius: 'button',
-          fontFamily: 'heading'
-        }}
         onClick={()=>{ setCount((c)=>c+1) }}
-      >Increment</Box>
+      >New Increment</Button>
       <Text id='current-count' role='status'>Current count: {count}</Text>
     </>
   )

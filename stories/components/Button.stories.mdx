@@ -1,0 +1,22 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import ButtonComponent from '../../components/Button';
+import { ButtonBrand, ButtonBrandAccent } from './Button.stories';
+
+<Meta
+  title={'Components/Button'}
+  component={ButtonComponent}
+/>
+
+# Button
+
+This is a cool button! It's reusable!
+
+<Canvas>
+  <Story name="ButtonBrand" >
+    <ButtonBrand />
+  </Story>
+  <Story name="ButtonBrandAccent" >
+    <ButtonBrandAccent />
+  </Story>
+</Canvas>
